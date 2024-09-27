@@ -8,6 +8,14 @@ const routes = createBrowserRouter([
     element: <MainLayouts />,
     children: [
       {
+        path: "*",
+        element: (
+          <h1 className=" text-center text-5xl font-Alata text-violet-800">
+            404 Page Not Found
+          </h1>
+        ),
+      },
+      {
         path: "/",
         element: <HomePage />,
       },

@@ -45,6 +45,7 @@ const Nav = () => {
         />
       </NavbarContent>
       <NavbarContent>
+        {/* TODO: search the  product  */}
         <Input
           type="email"
           className="max-w-xs"
