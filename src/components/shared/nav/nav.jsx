@@ -1,6 +1,9 @@
 import {
-  Card,
-  CardBody,
+  Badge,
+  Dropdown,
+  DropdownItem,
+  DropdownMenu,
+  DropdownTrigger,
   Input,
   Navbar,
   NavbarContent,
@@ -11,6 +14,7 @@ import {
 } from "@nextui-org/react";
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { CartIcon } from "../../../assets/icons/CartIcon ";
 import { SearchIcon } from "../../../assets/icons/search_icons";
 
 const Nav = () => {
@@ -57,22 +61,38 @@ const Nav = () => {
           }
         />
       </NavbarContent>
-      <Card className="hidden sm:flex  ">
-        <CardBody>
-          <NavbarContent justify="center" className="gap-4">
-            {menuItems.map((item, index) => (
-              <NavbarItem key={index}>
-                <NavLink
-                  to={item.href}
-                  className={({ isActive }) => (isActive ? "show active" : "")}
-                >
-                  {item.label}
-                </NavLink>
-              </NavbarItem>
-            ))}
-          </NavbarContent>
-        </CardBody>
-      </Card>
+      <div className="hidden sm:flex p-2    ">
+        <NavbarContent justify="center" className="gap-4">
+          {menuItems.map((item, index) => (
+            <NavbarItem key={index}>
+              <NavLink
+                to={item.href}
+                className={({ isActive }) => (isActive ? "show active" : "")}
+              >
+                {item.label}
+              </NavLink>
+            </NavbarItem>
+          ))}
+        </NavbarContent>
+      </div>
+      <NavbarContent justify="end">
+        <Dropdown placement=" ">
+          <DropdownTrigger>
+            <div className="flex items-center gap-4">
+              <div className="flex items-center gap-3">
+                <Badge color="danger" content={20} shape="circle">
+                  <CartIcon size={30} />
+                </Badge>
+              </div>
+            </div>
+          </DropdownTrigger>
+          <DropdownMenu aria-label="Profile Actions" variant="flat">
+            <DropdownItem key="profile">My Profile</DropdownItem>
+
+            <DropdownItem key="settings">Check Out</DropdownItem>
+          </DropdownMenu>
+        </Dropdown>
+      </NavbarContent>
 
       <NavbarMenu>
         {menuItems.map((item, index) => (

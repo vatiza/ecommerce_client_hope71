@@ -6,7 +6,7 @@ const MainLayouts = () => {
   return (
     <div>
       <Nav />
-      <Outlet />
+      <div className="px-3 lg:px-10"><Outlet /></div>
     </div>
   );
 };

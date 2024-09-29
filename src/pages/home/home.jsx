@@ -1,3 +1,4 @@
+import FlashSale from "../../components/flash_sale/flash_sale";
 import Sliders from "../../components/sliders/sliders";
 
 const HomePage = () => {
@@ -6,6 +7,7 @@ const HomePage = () => {
       <header>
         <Sliders />
       </header>
+      <FlashSale />
     </div>
   );
 };
