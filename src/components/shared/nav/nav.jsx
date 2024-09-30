@@ -14,32 +14,32 @@ import {
 } from "@nextui-org/react";
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { CartIcon } from "../../../assets/icons/CartIcon ";
+import { CartIcon } from "../../../assets/icons/CartIcon";
 import { SearchIcon } from "../../../assets/icons/search_icons";
 
 const Nav = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  // TODO: no need nav options
+  // const menuItems = [
+  //   {
+  //     href: "/",
+  //     label: "Home",
+  //   },
+  //   {
+  //     href: "/team",
+  //     label: "Team",
+  //   },
 
-  const menuItems = [
-    {
-      href: "/",
-      label: "Home",
-    },
-    {
-      href: "/team",
-      label: "Team",
-    },
+  //   {
+  //     href: "/about",
+  //     label: "About",
+  //   },
 
-    {
-      href: "/about",
-      label: "About",
-    },
-
-    {
-      href: "/features",
-      label: "Features",
-    },
-  ];
+  //   {
+  //     href: "/features",
+  //     label: "Features",
+  //   },
+  // ];
   return (
     <Navbar onMenuOpenChange={setIsMenuOpen}>
       <NavbarContent>
@@ -61,7 +61,7 @@ const Nav = () => {
           }
         />
       </NavbarContent>
-      <div className="hidden sm:flex p-2    ">
+      {/* <div className="hidden sm:flex p-2    ">
         <NavbarContent justify="center" className="gap-4">
           {menuItems.map((item, index) => (
             <NavbarItem key={index}>
@@ -74,7 +74,7 @@ const Nav = () => {
             </NavbarItem>
           ))}
         </NavbarContent>
-      </div>
+      </div> */}
       <NavbarContent justify="end">
         <Dropdown placement=" ">
           <DropdownTrigger>
@@ -94,7 +94,7 @@ const Nav = () => {
         </Dropdown>
       </NavbarContent>
 
-      <NavbarMenu>
+      {/* <NavbarMenu>
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={index}>
             <NavLink
@@ -105,7 +105,7 @@ const Nav = () => {
             </NavLink>
           </NavbarMenuItem>
         ))}
-      </NavbarMenu>
+      </NavbarMenu> */}
     </Navbar>
   );
 };
