@@ -11,7 +11,7 @@ import { Spinner } from "@nextui-org/react";
 const FreeMoodSliders = () => {
   const [products, loading] = GetProducts();
   const productsLimit = products.slice(0, 9);
-  console.log(products);
+
   return (
     <>
       <Swiper
