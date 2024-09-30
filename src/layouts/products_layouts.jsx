@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import Nav from "../components/shared/nav/nav";
 
 const ProductLayout = () => {
@@ -6,18 +6,25 @@ const ProductLayout = () => {
     <div>
       <Nav />
       {/* Product Page Content */}
-      <div className="grid grid-cols-2 gap-4">
-        <div>
+      <div className="grid grid-cols-[1fr_5fr] gap-4">
+        <div className="col-span-1">
           <ul>
-            <li>Product 1</li>
-            <li>Product 2</li>
-            <li>Product 3</li>
-            <li>Product 4</li>
-            <li>Product 5</li>
+            <li>
+              <Link to="/T shirt">T shirt</Link>
+            </li>
+            <li>
+              <Link to="/pants">Pants</Link>
+            </li>
+            <li>
+              <Link to="/shoes">Shoes</Link>
+            </li>
+            <li>
+              <Link to="/accessories">Accessories</Link>
+            </li>
           </ul>
         </div>
-        <div>
-          <Outlet />    
+        <div className="col-span-1">
+          <Outlet />
         </div>
       </div>
     </div>

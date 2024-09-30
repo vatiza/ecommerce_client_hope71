@@ -2,11 +2,11 @@ import { Card, CardHeader, CardBody, Image, Badge } from "@nextui-org/react";
 import { Link } from "react-router-dom";
 
 const ProductsCard = ({ product }) => {
-  const { title, price, image, category } = product;
-  console.log(product);
+  const { id, title, price, image, category } = product;
+
   return (
     <div>
-      <Link className="" to="/">
+      <Link className="" to={`/product/${id}`}>
         <Badge content="20% OFF" shape="circle" color="danger">
           <Card className="">
             <CardBody className=" w-full">
